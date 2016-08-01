@@ -1,0 +1,146 @@
+// Bootstrap
+// =========
+
+// You can include less bootstrap components if you like by
+// importing the .less files you want directly, instead of
+// the main bootstrap/bootstrap.less file.
+//
+// Bootstrap can be removed entirely by deleting this line.
+
+@import "bootstrap/bootstrap.less";
+@import url(https://fonts.googleapis.com/css?family=League+Script);
+@import url(https://fonts.googleapis.com/css?family=Yellowtail);
+
+// The easiest way to customise Bootstrap variables while
+// being able to easily override the source files with new
+// versions is to override the ones you want in another file.
+//
+// You can also add your own custom variables to this file for
+// use in your site stylesheets.
+
+@import "site/variables.less";
+
+// Color variables (appears count calculates by raw css)
+@color0: #ff1532; // Appears 2 times
+@color1: #e6e6e6; // Appears 2 times
+
+// Width variables (appears count calculates by raw css)
+@width1: 100%; // Appears 3 times
+
+
+
+// Site Styles
+// ===========
+
+// Add your own site style includes here
+@import "site/layout.less";
+
+
+body {
+  padding-bottom: 30px;
+  width: @width1;
+}
+
+html {
+  min-height: 100%;
+}
+.navbar-default {
+  background-color: @color0;
+  background-image: none;
+  background-repeat: no-repeat;
+  .navbar-collapse {
+	border-top: 0px;
+  }
+  .navbar-toggle {
+	.icon-bar {
+	  background-color: white;
+	}
+	&:focus {
+	  background-color: inherit;
+	}
+	&:hover {
+	  background-color: inherit;
+	}
+  }
+}
+.navbar {
+  ul>li>a {
+	color: white !important;
+  }
+}
+.navbar
+  ul>li>a {
+	&:hover {
+	  color: black !important;
+	  font-weight: bold !important;
+	}
+  }
+
+.img-responsive  {
+  position: relative;
+  width: 400px;
+  z-index: 1031;
+  margin-bottom: -60px;
+  
+}
+
+.jumbotron {
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-color: @color1;
+  background-image: url("http://www.transparenttextures.com/patterns/strange-bullseyes.png");
+  background-size: cover;
+  display: block;
+  overflow: visible;
+  padding-bottom: 30px;
+  position:relative;
+  width: @width1;
+  z-index: -1;
+  h2, p  {
+	font-family: 'Yellowtail', cursive;
+  }
+}
+//.about-me {
+//  -moz-background-size: cover;
+//  -o-background-size: cover;
+//  -webkit-background-size: cover;
+//  background-color: @color1;
+//  background-image: url("http://www.transparenttextures.com/patterns/strange-bullseyes.png");
+//  background-size: cover;
+//  display: block;
+//  overflow: visible;
+//  padding-bottom: 30px;
+//  position:relative;
+//  width: @width1;
+//  z-index: -1;
+//}
+//.transparent {
+//  background-color: #ffffff;
+//  border-radius: 10px;
+//  border: 1px solid black;
+//  filter: alpha(opacity=60);
+//  margin: 30px;
+//  opacity: 0.6;
+//}
+//.headshot {
+//  border-radius: 10px;
+//  border: 1px solid black;
+//  float: left;
+//  margin: 20px;
+//}
+//.mission {
+//  text-align: center;
+//}
+.footer-container {
+  background-color: @color0;
+  background-image: none;
+  background-repeat: no-repeat;
+  height: 50px;
+  text-align: center;
+
+  p > a {
+	color:white;
+	display: inline-block;
+  }
+}
