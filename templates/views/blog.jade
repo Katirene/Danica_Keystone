@@ -27,7 +27,7 @@ block intro
 		h1= data.category ? data.category.name : 'Blog'
 
 block content
-	.container: .row
+	.container: .jumbotron .row
 		.col-sm-8.col-md-9
 			if filters.category && !data.category
 				h3.text-muted Invalid Category.
